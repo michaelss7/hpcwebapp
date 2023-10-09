@@ -43,13 +43,13 @@ def index():
             <h1>HPC Rescale Data Transfer</h1>
             <form method="post">
                 <label for="jobid">JobID:</label>
-                <input type="text" id="jobid" name="jobid" required><br><br>
+                <input type="text" id="jobid" name="jobid" required placeholder="Rescale jobid"><br><br>
 
                 <label for="apikey">APIKey:</label>
-                <input type="apikey" id="apikey" name="apikey" required><br><br>
+                <input type="text" id="apikey" name="apikey" required placeholder="Rescale API Key"><br><br>
 
                 <label for="dest">Destination Path:</label>
-                <textarea id="dest" name="dest" rows="1" required></textarea><br><br>
+                <input type="text" id="dest" name="dest" required placeholder="\\subsea7.net\hpcdata\data\pathtodata"><br><br>
 
                 <input type="submit" value="Submit">
             </form>
