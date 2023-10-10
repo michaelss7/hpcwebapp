@@ -20,7 +20,7 @@ def index():
 
             # Do something with the data (e.g., send it to a webhook or store it in a database)
             
-            queue_name = "testqueue"
+            queue_name = "rescaletransfer"
             account_url = "https://saweuprparis.queue.core.windows.net"
             default_credential = DefaultAzureCredential()
             queue_client = QueueClient(account_url, queue_name=queue_name ,credential=default_credential)
@@ -28,7 +28,7 @@ def index():
             queue_client.send_message(data)
 
             # Respond with a success message
-            return jsonify({"message": "Data received and sent to queue. You will be notified by email when data copy is complete"})
+            return jsonify("Data received and sent to queue. You will be notified by email when data copy is complete")
 
         except Exception as e:
             return jsonify({"error": str(e)}), 500  # Respond with an error if something goes wrong
