@@ -107,10 +107,9 @@ def index():
 
             <label for="dest">Destination Path:</label>
             <input type="text" id="dest" name="dest" required placeholder="\\\\subsea7.net\\hpcdata\\pathtodata" size="40">
-            
-            <small class="help-text">Destination path is Case-Sensitive. </small>
+            <small class="Destination path is Case-Sensitive."></small>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" size="40">
         </form>
     </div>
 </body>
