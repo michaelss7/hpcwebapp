@@ -35,30 +35,72 @@ def index():
 
     # If the request is GET (initial page load)
     return '''
-        <!doctype html>
-        <html>
-        <head>
-            <title>HPC Data Transfer</title>
-        </head>
-        <body>
-            <h1>HPC Rescale Data Transfer</h1>
-            <form method="post">
+<!doctype html>
+<html>
+<head>
+    <title>HPC Rescale Data Transfer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        label, input, textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HPC Rescale Data Transfer</h1>
+        <form method="post">
                 <label for="jobid">JobID:</label>
                 <input type="text" id="jobid" name="jobid" required placeholder="Rescale jobid"><br><br>
 
                 <label for="apikey">APIKey:</label>
-                <input type="text" id="apikey" name="apikey" required placeholder="Rescale API Key"><br><br>
+                <input type="text" id="apikey" name="apikey" required size="40" placeholder="Rescale API Key"><br><br>
 
                 <label for="ss7email">Subsea7 email:</label>
                 <input type="text" id="ss7email" name="ss7email" required placeholder="john.smith@subsea7.com"><br><br>
 
                 <label for="dest">Destination Path:</label>
                 <input type="text" id="dest" name="dest" required size="40" placeholder="\\\\subsea7.net\hpcdata\pathtodata"><br><br>
-
-                <input type="submit" value="Submit">
-            </form>
-        </body>
-        </html>
+                </div>
+                <small class="w-100">Help text</small>
+                </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
     '''
 
 if __name__ == '__main__':
