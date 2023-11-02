@@ -85,9 +85,17 @@ def index():
             border-radius: 5px;
         }
 
+       .input-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         .help-text {
             color: #555;
             font-size: 14px;
+            margin-top: 5px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -105,9 +113,12 @@ def index():
             <label for="ss7email">Subsea7 email:</label>
             <input type="text" id="ss7email" name="ss7email" required placeholder="john.smith@subsea7.com">
 
+
             <label for="dest">Destination Path:</label>
-            <input type="text" id="dest" name="dest" required placeholder="\\\\subsea7.net\\hpcdata\\pathtodata" size="40">
-            <Form.Text id="dest" muted> Destination path is Case-Sensitive.</Form.Text>
+            <div class="input-wrapper">
+            <input type="text" id="dest" name="dest" required placeholder="\\subsea7.net\hpcdata\pathtodata" size="40">
+            <small class="help-text">Destination path is Case-Sensitive.</small>
+            </div>
 
             <input type="submit" value="Submit" size="40">
         </form>
