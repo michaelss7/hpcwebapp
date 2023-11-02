@@ -107,7 +107,7 @@ def index():
 
             <label for="dest">Destination Path:</label>
             <input type="text" id="dest" name="dest" required placeholder="\\\\subsea7.net\\hpcdata\\pathtodata" size="40">
-            <small class="Help text">Destination path is Case-Sensitive.></small>
+            <Form.Text id="dest" muted> Destination path is Case-Sensitive.</Form.Text>
 
             <input type="submit" value="Submit" size="40">
         </form>
